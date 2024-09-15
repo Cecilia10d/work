@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ballet - My Hobby</title>
+    <style>
+        body {
+            background: burlywood;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            background: white;
+            font-size: 15px;
+            padding: 15px 20px;
+            transition: all 200ms ease-in-out;
+
+        }
+
+        button:hover {
+            background: gray;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 650px;
+            background: gray;
+            padding: 18px;
+            border-radius: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 15px;
+            font-size: 20px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+
+        }
+
+        .image-galley {
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100px;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+
+
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+
+        .dark {
+            background: black;
+            color: white;
+        }
+
+        .dark .container {
+            background: rgba(255, 255, 255, 0.1);
+           }
+
+        .dark {
+            color: burlywood;
+        }
+  </style>
+
+</head>
+
+<body class="dark">
+    <button class="theme-button">Dark theme</button>
+
+    <h1>Ballet</h1>
+    <h2>My favorite hobby</h2>
+    <a href="https://en.wikipedia.org/wiki/Ballet" target="_blank"></a>
+
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/374/original/download.jpg?1722864906"
+        alt="" />
+    </a>
+
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/376/original/download-1.jpg?1722865056"
+        alt="" />
+
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/379/original/download-2.jpg?1722865335"
+        alt="" />
+
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/384/original/images.jpg?1722867197"
+        alt="" />
+    <p>
+        Ballet (French: [balɛ]) is a type of performance dance that originated during the Italian Renaissance in the
+        fifteenth
+        century and later developed into a concert dance form in France and Russia. It has since become a widespread and
+        highly
+        technical form of dance with its own vocabulary. Ballet has been influential globally and has defined the
+        foundational
+        techniques which are used in many other dance genres and cultures. Various schools around the world have
+        incorporated
+        their own cultures. As a result, ballet has evolved in distinct ways.
+    </p>
+
+    <button>Learn Ballet</button>
+    <footer>
+        Coded with love by Cecilia Mutisya.
+        
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            // body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+</body>
+
+</html>
